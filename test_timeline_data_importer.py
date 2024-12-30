@@ -2,16 +2,18 @@ import unittest
 import json
 from timeline_classes import SemanticSegment, Point, TimelinePath, TopCandidate, Visit, Activity
 
+timeline_json_file_name = './12192924_Timeline.json'
+
 class TestTimelineImport(unittest.TestCase):
     def test_import_timeline_json(self):
-        with open('c:/Users/tsudonymn/dev/py-where-was-i/12192924_Timeline.json', 'r') as file:
+        with open(timeline_json_file_name, 'r') as file:
             data = json.load(file)
 
         self.assertIsInstance(data, dict)
         self.assertIn('semanticSegments', data)
 
     def test_import_semantic_segments(self):
-        with open('c:/Users/tsudonymn/dev/py-where-was-i/12192924_Timeline.json', 'r') as file:
+        with open(timeline_json_file_name, 'r') as file:
             data = json.load(file)
 
         # Check if 'semanticSegments' is present and is a list
@@ -25,7 +27,7 @@ class TestTimelineImport(unittest.TestCase):
             self.assertIn('endTime', first_segment)
 
     def test_import_semantic_segments_with_classes(self):
-        with open('c:/Users/tsudonymn/dev/py-where-was-i/12192924_Timeline.json', 'r') as file:
+        with open(timeline_json_file_name, 'r') as file:
             data = json.load(file)
 
         semantic_segments = data['semanticSegments']
