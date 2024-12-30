@@ -1,0 +1,278 @@
+[
+    {
+        "timelineObjects": [
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 422196965,
+                        "longitudeE7": -853791715,
+                        "placeId": "ChIJ320973",
+                        "address": "Random Location 2",
+                        "name": "Place 36"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1656248456729",
+                        "endTimestampMs": "1656252333544"
+                    },
+                    "visitConfidence": 85
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": null,
+                "activitySegment": {
+                    "startLocation": {
+                        "latitudeE7": 334608892,
+                        "longitudeE7": -749938884,
+                        "placeId": "ChIJ863946",
+                        "address": "Random Location 52",
+                        "name": "Place 21"
+                    },
+                    "endLocation": {
+                        "latitudeE7": 342076667,
+                        "longitudeE7": -728448406,
+                        "placeId": "ChIJ952748",
+                        "address": "Random Location 54",
+                        "name": "Place 40"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1666196265815",
+                        "endTimestampMs": "1666242108458"
+                    },
+                    "activityType": "ON_TRANSIT",
+                    "confidence": "LOW",
+                    "waypointPath": {
+                        "waypoints": [
+                            {
+                                "latE7": 334608892,
+                                "lngE7": -749938884
+                            },
+                            {
+                                "latE7": 342076667,
+                                "lngE7": -728448406
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 481039656,
+                        "longitudeE7": -1132640339,
+                        "placeId": "ChIJ349313",
+                        "address": "Random Location 17",
+                        "name": "Place 44"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1658296232935",
+                        "endTimestampMs": "1658303306993"
+                    },
+                    "visitConfidence": 79
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 316407153,
+                        "longitudeE7": -911399167,
+                        "placeId": "ChIJ168286",
+                        "address": "Random Location 43",
+                        "name": "Place 18"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1649335889105",
+                        "endTimestampMs": "1649344702902"
+                    },
+                    "visitConfidence": 89
+                },
+                "activitySegment": null
+            }
+        ]
+    },
+    {
+        "timelineObjects": [
+            {
+                "placeVisit": null,
+                "activitySegment": {
+                    "startLocation": {
+                        "latitudeE7": 322138851,
+                        "longitudeE7": -886346379,
+                        "placeId": "ChIJ662815",
+                        "address": "Random Location 95",
+                        "name": "Place 20"
+                    },
+                    "endLocation": {
+                        "latitudeE7": 331215358,
+                        "longitudeE7": -810086389,
+                        "placeId": "ChIJ298733",
+                        "address": "Random Location 41",
+                        "name": "Place 39"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1670401186197",
+                        "endTimestampMs": "1670443441898"
+                    },
+                    "activityType": "CYCLING",
+                    "confidence": "HIGH",
+                    "waypointPath": {
+                        "waypoints": [
+                            {
+                                "latE7": 322138851,
+                                "lngE7": -886346379
+                            },
+                            {
+                                "latE7": 331215358,
+                                "lngE7": -810086389
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "placeVisit": null,
+                "activitySegment": {
+                    "startLocation": {
+                        "latitudeE7": 305011570,
+                        "longitudeE7": -1141507177,
+                        "placeId": "ChIJ311107",
+                        "address": "Random Location 94",
+                        "name": "Place 18"
+                    },
+                    "endLocation": {
+                        "latitudeE7": 306512983,
+                        "longitudeE7": -1107099623,
+                        "placeId": "ChIJ646867",
+                        "address": "Random Location 47",
+                        "name": "Place 34"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1654944973187",
+                        "endTimestampMs": "1655025697829"
+                    },
+                    "activityType": "STILL",
+                    "confidence": "MEDIUM",
+                    "waypointPath": {
+                        "waypoints": [
+                            {
+                                "latE7": 305011570,
+                                "lngE7": -1141507177
+                            },
+                            {
+                                "latE7": 306512983,
+                                "lngE7": -1107099623
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 428783945,
+                        "longitudeE7": -888612255,
+                        "placeId": "ChIJ351563",
+                        "address": "Random Location 49",
+                        "name": "Place 33"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1645570744236",
+                        "endTimestampMs": "1645603530284"
+                    },
+                    "visitConfidence": 50
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 490414373,
+                        "longitudeE7": -972181323,
+                        "placeId": "ChIJ557066",
+                        "address": "Random Location 3",
+                        "name": "Place 2"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1654038919526",
+                        "endTimestampMs": "1654116678919"
+                    },
+                    "visitConfidence": 99
+                },
+                "activitySegment": null
+            }
+        ]
+    },
+    {
+        "timelineObjects": [
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 489800745,
+                        "longitudeE7": -1110073120,
+                        "placeId": "ChIJ652454",
+                        "address": "Random Location 93",
+                        "name": "Place 13"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1659379892839",
+                        "endTimestampMs": "1659453814812"
+                    },
+                    "visitConfidence": 68
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 361466093,
+                        "longitudeE7": -746625109,
+                        "placeId": "ChIJ886082",
+                        "address": "Random Location 97",
+                        "name": "Place 43"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1665226500813",
+                        "endTimestampMs": "1665240093889"
+                    },
+                    "visitConfidence": 100
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 429477944,
+                        "longitudeE7": -1139272761,
+                        "placeId": "ChIJ443544",
+                        "address": "Random Location 48",
+                        "name": "Place 21"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1651011262939",
+                        "endTimestampMs": "1651096200929"
+                    },
+                    "visitConfidence": 51
+                },
+                "activitySegment": null
+            },
+            {
+                "placeVisit": {
+                    "location": {
+                        "latitudeE7": 462333226,
+                        "longitudeE7": -758568626,
+                        "placeId": "ChIJ261052",
+                        "address": "Random Location 99",
+                        "name": "Place 1"
+                    },
+                    "duration": {
+                        "startTimestampMs": "1648167568840",
+                        "endTimestampMs": "1648198167646"
+                    },
+                    "visitConfidence": 62
+                },
+                "activitySegment": null
+            }
+        ]
+    }
+]

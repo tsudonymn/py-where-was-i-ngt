@@ -1,0 +1,167 @@
+{
+    "semanticSegments": [
+        {
+            "startTime": "2010-12-01T11:00:00.000-05:00",
+            "endTime": "2010-12-01T13:00:00.000-05:00",
+            "timelinePath": [
+                {
+                    "point": "42.274628°, -83.744944°",
+                    "time": "2010-12-01T11:36:00.000-05:00"
+                },
+                {
+                    "point": "42.277365°, -83.746204°",
+                    "time": "2010-12-01T11:40:00.000-05:00"
+                },
+                {
+                    "point": "42.279231°, -83.745489°",
+                    "time": "2010-12-01T11:41:00.000-05:00"
+                },
+                {
+                    "point": "42.279455°, -83.746265°",
+                    "time": "2010-12-01T11:43:00.000-05:00"
+                },
+                {
+                    "point": "42.279943°, -83.743888°",
+                    "time": "2010-12-01T11:51:00.000-05:00"
+                },
+                {
+                    "point": "42.282898°, -83.745977°",
+                    "time": "2010-12-01T11:55:00.000-05:00"
+                },
+                {
+                    "point": "42.284475°, -83.74689°",
+                    "time": "2010-12-01T12:00:00.000-05:00"
+                }
+            ]
+        },
+        {
+            "startTime": "2010-12-01T11:41:14.000-05:00",
+            "endTime": "2010-12-01T11:52:25.000-05:00",
+            "startTimeTimezoneUtcOffsetMinutes": -300,
+            "endTimeTimezoneUtcOffsetMinutes": -300,
+            "visit": {
+                "hierarchyLevel": 0,
+                "probability": 0.4699999988079071,
+                "topCandidate": {
+                    "placeId": "ChIJlVNJjT6uPIgRUo9IXToota0",
+                    "semanticType": "UNKNOWN",
+                    "probability": 0.03407926857471466,
+                    "placeLocation": {
+                        "latLng": "42.2795528°, -83.7445199°"
+                    }
+                }
+            }
+        },
+        {
+            "startTime": "2010-12-01T13:00:00.000-05:00",
+            "endTime": "2010-12-01T15:00:00.000-05:00",
+            "timelinePath": [
+                {
+                    "point": "42.274816°, -83.744303°",
+                    "time": "2010-12-01T13:01:00.000-05:00"
+                },
+                {
+                    "point": "42.272035°, -83.745103°",
+                    "time": "2010-12-01T14:01:00.000-05:00"
+                },
+                {
+                    "point": "42.27411°, -83.745627°",
+                    "time": "2010-12-01T14:55:00.000-05:00"
+                },
+                {
+                    "point": "42.27411°, -83.745627°",
+                    "time": "2010-12-01T14:55:00.000-05:00"
+                }
+            ]
+        },
+        {
+            "startTime": "2010-12-01T14:54:42.000-05:00",
+            "endTime": "2010-12-01T17:23:17.000-05:00",
+            "startTimeTimezoneUtcOffsetMinutes": -300,
+            "endTimeTimezoneUtcOffsetMinutes": -300,
+            "visit": {
+                "hierarchyLevel": 0,
+                "probability": 0.7599999904632568,
+                "topCandidate": {
+                    "placeId": "ChIJZ5rwrTmuPIgReuK-8tKYvOo",
+                    "semanticType": "WORK",
+                    "probability": 0.9933645129203796,
+                    "placeLocation": {
+                        "latLng": "42.274218°, -83.7453092°"
+                    }
+                }
+            }
+        },
+        {
+            "startTime": "2010-12-01T17:00:00.000-05:00",
+            "endTime": "2010-12-01T19:00:00.000-05:00",
+            "timelinePath": [
+                {
+                    "point": "42.274574°, -83.744783°",
+                    "time": "2010-12-01T17:23:00.000-05:00"
+                },
+                {
+                    "point": "42.273372°, -83.749156°",
+                    "time": "2010-12-01T17:25:00.000-05:00"
+                },
+                {
+                    "point": "42.269001°, -83.750102°",
+                    "time": "2010-12-01T17:25:00.000-05:00"
+                },
+                {
+                    "point": "42.270182°, -83.745637°",
+                    "time": "2010-12-01T17:26:00.000-05:00"
+                },
+                {
+                    "point": "42.253992°, -83.753041°",
+                    "time": "2010-12-01T17:30:00.000-05:00"
+                },
+                {
+                    "point": "42.249638°, -83.76295°",
+                    "time": "2010-12-01T17:31:00.000-05:00"
+                },
+                {
+                    "point": "42.250269°, -83.765201°",
+                    "time": "2010-12-01T17:34:00.000-05:00"
+                }
+            ]
+        },
+        {
+            "startTime": "2010-12-01T17:23:17.000-05:00",
+            "endTime": "2010-12-01T17:34:15.000-05:00",
+            "startTimeTimezoneUtcOffsetMinutes": -300,
+            "endTimeTimezoneUtcOffsetMinutes": -300,
+            "activity": {
+                "start": {
+                    "latLng": "42.274218°, -83.7453092°"
+                },
+                "end": {
+                    "latLng": "42.2504491°, -83.764909°"
+                },
+                "distanceMeters": 3096.267578125,
+                "topCandidate": {
+                    "type": "IN_VEHICLE",
+                    "probability": 0.0
+                }
+            }
+        },
+        {
+            "startTime": "2010-12-01T17:34:15.000-05:00",
+            "endTime": "2010-12-02T08:23:25.000-05:00",
+            "startTimeTimezoneUtcOffsetMinutes": -300,
+            "endTimeTimezoneUtcOffsetMinutes": -300,
+            "visit": {
+                "hierarchyLevel": 0,
+                "probability": 0.7799999713897705,
+                "topCandidate": {
+                    "placeId": "ChIJEUZpctmvPIgRYgcv-ytnDJQ",
+                    "semanticType": "HOME",
+                    "probability": 0.9947307705879211,
+                    "placeLocation": {
+                        "latLng": "42.2504491°, -83.764909°"
+                    }
+                }
+            }
+        }
+    ]
+}
