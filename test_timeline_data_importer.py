@@ -1,6 +1,6 @@
 import unittest
 import json
-from timeline_classes import SemanticSegment, Point, TimelinePath, TopCandidate, Visit, Activity
+from google_timeline_classes import SemanticSegment, Point, TimelinePath, TopCandidate, Visit, Activity
 
 timeline_json_file_name = './12192924_Timeline.json'
 
