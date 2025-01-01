@@ -1,9 +1,12 @@
 import json
 from datetime import datetime
+from pprint import pprint
 from typing import List, Dict
 from google_timeline_classes import SemanticSegment
 from my_timeline_classes import Location
+from preferences import Preferences
 from proximity import is_location_near_point
+from timeline_importer import load_timeline_data
 
 
 def find_segments_near_location(
@@ -39,34 +42,15 @@ def find_segments_near_location(
 def main():
     print("py-where-was-i analysis beginning!")
 
-    with open('sample_timeline_data_20241227_191600.json') as f:
-        timeline_json_data = json.load(f)
+    prefs = Preferences()
+    locations = prefs.locations()
+    semantic_segments = load_timeline_data("12192924_Timeline.json")
 
-    locations = []
+    results_dict = find_segments_near_location(locations, semantic_segments)
 
-    for timeline_object in timeline_json_data[0]['timelineObjects']:
-        if 'placeVisit' in timeline_object:
-            place_visit = timeline_object['placeVisit']
-            location = {
-                'latitude': place_visit['location']['latitudeE7'] / 10000000,
-                'longitude': place_visit['location']['longitudeE7'] / 10000000,
-                'address': place_visit['location']['address'],
-                'name': place_visit['location']['name']
-            }
-            duration = {
-                'start_timestamp': datetime.fromtimestamp(int(place_visit['duration']['startTimestampMs']) / 1000),
-                'end_timestamp': datetime.fromtimestamp(int(place_visit['duration']['endTimestampMs']) / 1000)
-            }
-            locations.append({
-                'location': location,
-                'duration': duration
-            })
+    pprint("Results:")
+    pprint(results_dict)
 
-    for location in locations:
-        print(f"Location: {location['location']['name']}")
-        print(f"Start Time: {location['duration']['start_timestamp']}")
-        print(f"End Time: {location['duration']['end_timestamp']}")
-        print()
 
 if __name__ == "__main__":
     main()
