@@ -40,5 +40,11 @@ class TestProximity(unittest.TestCase):
         point = GooglePoint("40.7218,-74.0060", "2024-01-01T12:00:00.000+00:00")
         self.assertTrue(is_location_near_point(location, point))
 
+    def test_location_with_degree_symbols(self):
+        # Test coordinates containing degree symbols
+        location = Location("place1", "42.2504552°,-71.8000081°", "Boston")
+        point = GooglePoint("42.2504552,-71.8000081", "2024-01-01T12:00:00.000+00:00")
+        self.assertTrue(is_location_near_point(location, point))
+
 if __name__ == '__main__':
     unittest.main()
