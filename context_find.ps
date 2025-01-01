@@ -1,0 +1,24 @@
+# Variables
+$filePath = ".\12192924_Timeline.json"
+$searchString = "placeId"
+$contextLines = 2
+
+# Read file and split into lines
+$lines = Get-Content -Path $filePath
+
+# Initialize an array to store results
+$result = @()
+
+# Loop through each line and search for the string
+for ($i = 0; $i -lt $lines.Count; $i++) {
+    if ($lines[$i] -match $searchString) {
+        # Add context lines to the result
+        $startLine = [math]::Max(0, $i - $contextLines)
+        $endLine = [math]::Min($lines.Count - 1, $i + $contextLines)
+        $result += $lines[$startLine..$endLine]
+        $result += ""  # Add a blank line between results for clarity
+    }
+}
+
+# Output the result
+$result
