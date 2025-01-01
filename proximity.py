@@ -15,11 +15,13 @@ def is_location_near_point(location: Location, point: GooglePoint) -> bool:
     Returns:
         bool: True if location is within 1km of point, False otherwise
     """
+    import re
+    
     # Extract coordinates from the Location's placeLocation string
-    loc_coords = tuple(map(float, [coord.replace('°', '') for coord in location.placeLocation.split(',')]))
+    loc_coords = tuple(map(float, [re.sub(r'[^0-9.-]', '', coord) for coord in location.placeLocation.split(',')]))
     
     # Extract coordinates from the Point's point string
-    point_coords = tuple(map(float, [coord.replace('°', '') for coord in point.point.split(',')]))
+    point_coords = tuple(map(float, [re.sub(r'[^0-9.-]', '', coord) for coord in point.point.split(',')]))
     
     return are_points_within_distance(loc_coords, point_coords, 1.0)
 

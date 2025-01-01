@@ -7,6 +7,7 @@ from my_timeline_classes import Location
 from preferences import Preferences
 from proximity import is_location_near_point
 from timeline_importer import load_timeline_data
+from icecream import ic
 
 
 def find_segments_near_location(
@@ -49,8 +50,10 @@ def main():
     results_dict = find_segments_near_location(locations, semantic_segments)
 
     pprint("Results:")
-    pprint(results_dict)
+    for key in results_dict.keys():
+        pprint(f"{key} found {len(results_dict[key])} segments")
 
+    ic(results_dict)
 
 if __name__ == "__main__":
     main()
