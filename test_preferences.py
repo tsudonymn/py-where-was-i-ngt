@@ -24,34 +24,42 @@ class TestPreferences(unittest.TestCase):
             ]
         }
 
-        print(f"yuioyuio {test_data}")
-
-        locations = self.prefs.locations_from_json_string(json.dumps(test_data))
-        self.assertEqual(len(locations), 2)
-        self.assertEqual(locations[0].label, "PARC")
-        self.assertEqual(locations[0].placeLocation, "37.468319°, -122.143936°")
-        self.assertEqual(locations[0].placeId, "ChIJAAAAABAAAAARYOAlcSt2CHw")
-        self.assertEqual(locations[1].label, "Vegas")
-        self.assertEqual(locations[1].placeLocation, "36.1716°, -115.1391°")
-        self.assertEqual(locations[1].placeId, "ChIJAAAAAABAAAAR4AosrBcexFk")
+        with patch("builtins.open", new_callable=mock_open, read_data=json.dumps(test_data)):
+            prefs = Preferences()
+            locations = prefs.locations()
+            self.assertEqual(len(locations.locations), 2)
+            self.assertEqual(locations.locations[0].label, "PARC")
+            self.assertEqual(locations.locations[0].placeLocation, "37.468319°, -122.143936°")
+            self.assertEqual(locations.locations[0].placeId, "ChIJAAAAABAAAAARYOAlcSt2CHw")
+            self.assertEqual(locations.locations[1].label, "Vegas")
+            self.assertEqual(locations.locations[1].placeLocation, "36.1716°, -115.1391°")
+            self.assertEqual(locations.locations[1].placeId, "ChIJAAAAAABAAAAR4AosrBcexFk")
 
     def test_locations_empty_file(self):
-        locations = self.prefs.locations_from_json_string("")
-        self.assertEqual(len(locations), 0)
+        with patch("builtins.open", new_callable=mock_open, read_data=""):
+            prefs = Preferences()
+            locations = prefs.locations()
+            self.assertEqual(len(locations.locations), 0)
 
     def test_locations_invalid_json(self):
-        locations = self.prefs.locations_from_json_string("invalid json")
-        self.assertEqual(len(locations), 0)
+        with patch("builtins.open", new_callable=mock_open, read_data="invalid json"):
+            prefs = Preferences()
+            locations = prefs.locations()
+            self.assertEqual(len(locations.locations), 0)
 
     def test_locations_missing_locations_key(self):
         test_data = """{"other_key": "value"}"""
-        locations = self.prefs.locations_from_json_string(test_data)
-        self.assertEqual(len(locations), 0)
+        with patch("builtins.open", new_callable=mock_open, read_data=test_data):
+            prefs = Preferences()
+            locations = prefs.locations()
+            self.assertEqual(len(locations.locations), 0)
 
     def test_place_locations_missing_key(self):
         test_data = {"locations": []}
-        place_locations = self.prefs.locations_from_json_string(json.dumps(test_data))
-        self.assertEqual(len(place_locations), 0)
+        with patch("builtins.open", new_callable=mock_open, read_data=json.dumps(test_data)):
+            prefs = Preferences()
+            locations = prefs.locations()
+            self.assertEqual(len(locations.locations), 0)
 
 
 class TestLoadPreferences(unittest.TestCase):
