@@ -54,5 +54,40 @@ class TestPreferences(unittest.TestCase):
         self.assertEqual(len(place_locations), 0)
 
 
+class TestLoadPreferences(unittest.TestCase):
+    @patch("builtins.open", new_callable=mock_open, read_data='{"locations": []}')
+    def test_load_preferences_valid(self, mock_file):
+        from preferences import load_preferences
+        result = load_preferences()
+        self.assertEqual(result, {"locations": []})
+        mock_file.assert_called_once_with("preferences.json", "r")
+
+    @patch("builtins.open", new_callable=mock_open, read_data="")
+    def test_load_preferences_empty_file(self, mock_file):
+        from preferences import load_preferences
+        result = load_preferences()
+        self.assertEqual(result, {"locations": []})
+
+    @patch("builtins.open", side_effect=FileNotFoundError)
+    def test_load_preferences_missing_file(self, mock_file):
+        from preferences import load_preferences
+        result = load_preferences()
+        self.assertEqual(result, {"locations": []})
+
+    @patch("builtins.open", new_callable=mock_open, read_data="invalid json")
+    def test_load_preferences_invalid_json(self, mock_file):
+        from preferences import load_preferences
+        result = load_preferences()
+        self.assertEqual(result, {"locations": []})
+
+    @patch("builtins.open", new_callable=mock_open, read_data='{"locations": [{"placeId": "test1"}, {"placeId": "test2"}]}')
+    def test_load_preferences_by_place_id(self, mock_file):
+        from preferences import load_preferences
+        result = load_preferences()
+        self.assertEqual(len(result["locations"]), 2)
+        self.assertEqual(result["locations"][0]["placeId"], "test1")
+        self.assertEqual(result["locations"][1]["placeId"], "test2")
+
+
 if __name__ == "__main__":
     unittest.main()
