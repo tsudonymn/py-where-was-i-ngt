@@ -6,11 +6,31 @@ from test_timeline_data_importer import timeline_json_file_name
 class Preferences:
     def __init__(self, filepath="preferences.json"):
         self.preferences = load_preferences(filepath)
+        self._locations = self.locations()
 
     def locations(self):
-        return self.locations_from_string(json.dumps(self.preferences))
+        return self.locations_from_json_string(json.dumps(self.preferences))
 
-    def locations_from_string(self, locations_json):
+    def add_location(self, place_id: str, place_location: str, label: str):
+        """
+        Adds a location to the preferences.
+        """
+        self._locations.append({
+            'placeId': place_id,
+            'placeLocation': place_location,
+            'label': label
+        })
+
+    def get_locations(self):
+        """
+        Lazily loads the locations as a dictionary where 'placeId' is the key.
+        """
+        if self._locations_dict is None:
+            # Lazily create the dictionary on first access
+            self._locations_dict = {location['placeId']: location for location in self._locations}
+        return self._locations_dict
+
+    def locations_from_json_string(self, locations_json):
         """Parses JSON and returns a list of Location objects."""
         try:
             data = json.loads(locations_json)
